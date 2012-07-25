@@ -201,7 +201,7 @@ public final class Chunk {
 					}
 
 					int strLen = endsAt - startsAt;
-					command.value = new String(contents, startsAt, strLen, header.getChunkCharset());
+					command.value = new String(contents, startsAt, strLen, header.getChunkCharset().name());
 					break;
 				case 25:
 					command.value = Short.valueOf(
